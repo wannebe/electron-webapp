@@ -30,7 +30,8 @@ You'll end up with the package at > home/deepin/wechat/app_0.0.1_amd64.deb.
 
 Edit the scripts section of your package.json:
 
-``` {
+```
+ {
   "name": "app",
   "description": "An awesome app!",
   "version": "0.0.1",
@@ -44,13 +45,13 @@ Edit the scripts section of your package.json:
     "electron-packager": "^9.0.0",
     "electron": "~1.7.0"
   }
-}```
+ }
+ 
+```
 
 Note: The versions in devDependencies are examples only, please use the latest package versions when possible.
 
-And run the script:
-
-> npm run deb64
+And run the script: > npm run deb64
 
 
 ## How It Works
