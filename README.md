@@ -3,9 +3,11 @@
 ## Installation
 
 
-### npm install nativefier -g
-### npm install electron-packager -g
-### npm install -g electron-installer-debian
+### sudo npm install nativefier -g
+### sudo npm install electron-packager -g
+### sudo npm install -g electron-installer-debian
+### sudo npm install electron --save-dev --save-exact
+### sudo apt-get install fakeroot
 
 
 
@@ -16,20 +18,38 @@ Creating a native desktop app for ![deepin bbs](bbs.deepin.org)
 
 > nativefier --name "deepinbbs" "https://bbs.deepin.org/"
 
-### You now run electron-packager to build the app for Debian:
+### Command
 
-> electron-packager . app --platform linux --arch x64 --out dist/
+> electron-installer-debian --src /home/deepin/wechat-linux-x64/ --dest /home/deepin/wechat/ --arch amd64
 
-### If you want to run electron-installer-debian straight from the command-line, install the package globally:
+You'll end up with the package at > home/deepin/wechat/app_0.0.1_amd64.deb.
 
-> npm install -g electron-installer-debian
+### Scripts
 
-### And point it to your built app:
+> npm install --save-dev electron-installer-debian
 
-> electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64
+Edit the scripts section of your package.json:
 
-You'll end up with the package at > dist/installers/app_0.0.1_amd64.deb.
+{
+  "name": "app",
+  "description": "An awesome app!",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . app --platform linux --arch x64 --out dist/",
+    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64"
+  },
+  "devDependencies": {
+    "electron-installer-debian": "^0.6.0",
+    "electron-packager": "^9.0.0",
+    "electron": "~1.7.0"
+  }
+}
+Note: The versions in devDependencies are examples only, please use the latest package versions when possible.
 
+And run the script:
+
+> npm run deb64
 
 
 ## How It Works
