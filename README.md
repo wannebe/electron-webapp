@@ -24,35 +24,6 @@ Creating a native desktop app for ![deepin bbs](bbs.deepin.org)
 
 You'll end up with the package at > home/deepin/wechat/app_0.0.1_amd64.deb.
 
-### Scripts
-
-> npm install --save-dev electron-installer-debian
-
-Edit the scripts section of your package.json:
-
-```
- {
-  "name": "app",
-  "description": "An awesome app!",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . app --platform linux --arch x64 --out dist/",
-    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64"
-  },
-  "devDependencies": {
-    "electron-installer-debian": "^0.6.0",
-    "electron-packager": "^9.0.0",
-    "electron": "~1.7.0"
-  }
- }
- 
-```
-
-Note: The versions in devDependencies are examples only, please use the latest package versions when possible.
-
-And run the script: > npm run deb64
-
 
 ## How It Works
 
