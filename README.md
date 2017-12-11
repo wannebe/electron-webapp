@@ -23,6 +23,7 @@
 5. npm install -g electron-installer-debian （安装electron打deb编译包）
 6. sudo apt-get install fakeroot (编译依赖)
 7. npm install -g electron-packager-interactive (增强包)
+8. npm install svg2png -g (desktop-icon)
 
 
 
