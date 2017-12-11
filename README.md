@@ -34,6 +34,6 @@ You'll end up with the package at > home/deepin/wechat/app_0.0.1_amd64.deb.
 * electron-packager-interactive: https://github.com/Urucas/electron-packager-interactive
 * grunt-electron: https://github.com/sindresorhus/grunt-electron
 
-* ![electron-packager ](https://www.npmjs.com/package/electron-packager)
+* electron-packager: https://www.npmjs.com/package/electron-packager
 
 * API: https://github.com/jiahaog/nativefier/blob/master/docs/api.md
