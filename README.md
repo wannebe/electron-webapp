@@ -3,11 +3,13 @@
 ## Installation
 
 
-### sudo npm install nativefier -g
-### sudo npm install electron-packager -g
-### sudo npm install -g electron-installer-debian
-### sudo npm install electron --save-dev --save-exact
+### npm install nativefier -g
+### npm install electron-packager -g
+### npm install -g electron-installer-debian
+### npm install electron --save-dev --save-exact
 ### sudo apt-get install fakeroot
+
+### npm install -g electron-packager-interactive 增强
 
 
 
@@ -33,3 +35,5 @@ You'll end up with the package at > home/deepin/wechat/app_0.0.1_amd64.deb.
 * grunt-electron: https://github.com/sindresorhus/grunt-electron
 
 ## ![electron-packager ](https://www.npmjs.com/package/electron-packager)
+
+## API: https://github.com/jiahaog/nativefier/blob/master/docs/api.md
