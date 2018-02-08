@@ -29,7 +29,7 @@
 
 ## Compile native file
 
-Creating a native desktop app for ![wechat](https://wx.qq.com/)
+Creating a native desktop app for wechat
 
 > nativefier --name "Wechat" "https://wx.qq.com/"
 
