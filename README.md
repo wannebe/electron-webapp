@@ -1,4 +1,4 @@
-# 图形化生成
+# GUI create apps.
 
 https://github.com/quanglam2807/appifier
 
