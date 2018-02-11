@@ -42,4 +42,7 @@ Creating a native desktop app for wechat
 
 > electron-installer-debian --src /home/deepin/wechat-linux-x64/ --dest /home/deepin/wechat/ --arch amd64
 
-You'll end up with the package at > home/deepin/wechat/wechat-nativefier-4418c7_1.0.0_amd64.deb.
+You'll end up with the package at > home/deepin/wechat/wechat_1.0.0_amd64.deb.
+
+
+> Note: dpkg-deb -R xxx.deb  dir (fakeroot dpkg -b dir  xxx.deb)  modfied `Exec=/usr/lib/wechat/wechat` path
